@@ -3,10 +3,13 @@
 (:require     ;[clojure.tools.logging :as ctlog]
               [taoensso.timbre :as timbre   :refer [log  trace  debug  info  warn  error  fatal  report logf tracef debugf infof warnf errorf fatalf reportf  spy get-env]]
               [taoensso.timbre.appenders.core :as appenders]
+              
+              ;;For this demo:
+              [clojure.pprint :as pp :refer [cl-format]]
+              
+              ))
 
 
-
-))
 
 
 ;; https://github.com/clojure/tools.logging
@@ -16,6 +19,12 @@
     (timbre/spy :info "divide-function" (/ x y)) ; yields the result
     (catch Exception ex
       (timbre/error ex "There was an error in calculation"))))
+
+
+
+(defn gizmo-counter-out [n] (pp/cl-format true "~@(~R~) gizmo~:P counted.\n" n))
+
+(defn gizmo-counter-log [n] (->> n (gizmo-counter-out) (with-out-str) (timbre/info)   ))
 
 
 

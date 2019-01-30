@@ -1,19 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?><project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>my-timbre-lib</groupId>
-  <artifactId>my-timbre-lib</artifactId>
+  <groupId>io.aviso</groupId>
+  <artifactId>pretty</artifactId>
   <packaging>jar</packaging>
-  <version>0.1.0-SNAPSHOT</version>
-  <name>my-timbre-lib</name>
-  <description>FIXME: write description</description>
-  <url>http://example.com/FIXME</url>
+  <version>0.1.33</version>
+  <name>pretty</name>
+  <description>Clojure library to help print things, prettily</description>
+  <url>https://github.com/AvisoNovate/pretty</url>
   <licenses>
     <license>
-      <name>EPL-2.0 OR GPL-2.0-or-later WITH Classpath-exception-2.0</name>
-      <url>https://www.eclipse.org/legal/epl-2.0/</url>
+      <name>Apache Sofware License 2.0</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0.html</url>
     </license>
   </licenses>
-  <scm/>
+  <scm>
+    <connection>scm:git:git://github.com/AvisoNovate/pretty.git</connection>
+    <developerConnection>scm:git:ssh://git@github.com/AvisoNovate/pretty.git</developerConnection>
+    <tag>f1acb203afcc8cfcd1fa4efba473ff75e604980e
+</tag>
+    <url>https://github.com/AvisoNovate/pretty</url>
+  </scm>
   <build>
     <sourceDirectory>src</sourceDirectory>
     <testSourceDirectory>test</testSourceDirectory>
@@ -44,7 +50,7 @@
     </repository>
     <repository>
       <id>clojars</id>
-      <url>https://repo.clojars.org/</url>
+      <url>https://clojars.org/repo/</url>
       <snapshots>
         <enabled>true</enabled>
       </snapshots>
@@ -60,12 +66,19 @@
     <dependency>
       <groupId>org.clojure</groupId>
       <artifactId>clojure</artifactId>
-      <version>1.9.0</version>
+      <version>1.5.0</version>
     </dependency>
     <dependency>
-      <groupId>com.taoensso</groupId>
-      <artifactId>timbre</artifactId>
-      <version>4.10.0</version>
+      <groupId>org.clojure</groupId>
+      <artifactId>tools.logging</artifactId>
+      <version>0.3.1</version>
+      <optional>true</optional>
+    </dependency>
+    <dependency>
+      <groupId>criterium</groupId>
+      <artifactId>criterium</artifactId>
+      <version>0.4.4</version>
+      <scope>test</scope>
     </dependency>
   </dependencies>
 </project>
