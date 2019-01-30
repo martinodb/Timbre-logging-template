@@ -16,13 +16,16 @@ libdir=
 
 
 um2_v_my_timbre_lib="$HOME/.m2/repository/my-timbre-lib/*"
+um2_v_my_ctlogging_lib="$HOME/.m2/repository/my-ctlogging-lib/*"
 
 localm2_v_my_timbre_lib="./my-timbre-app/local-m2/my-timbre-lib/*"
+localm2_v_my_ctlogging_lib="./my-timbre-app/local-m2/my-ctlogging-lib/*"
 
 libtarget_v_my_timbre_lib="./my-ex-libs/my-timbre-lib/target/*"
+libtarget_v_my_ctlogging_lib="./my-ex-libs/my-ctlogging-lib/target/*"
 
 libdir_v_my_timbre_lib="./my-ex-libs/my-timbre-lib/"
-
+libdir_v_my_ctlogging_lib="./my-ex-libs/my-ctlogging-lib/"
 
 
 
@@ -59,8 +62,17 @@ if [ $sourcerepo = "my-timbre-lib" ]; then
     localm2=$localm2_v_timbre_lib
     libtarget=$libtarget_v_my_timbre_lib
     libdir=$libdir_v_my_timbre_lib
+
+elif [ $sourcerepo = "my-ctlogging-lib" ]; then
+    echo "sourcerepo is set to my-ctlogging-lib"
+    um2=$um2_v_my_ctlogging_lib
+    localm2=$localm2_v_my_ctlogging_lib
+    libtarget=$libtarget_v_my_ctlogging_lib
+    libdir=$libdir_v_my_ctlogging_lib
+
+
 else
-    echo "No valid repo option given. The options are: '-s my-timbre-lib'. "
+    echo "No valid repo option given. The options are: '-s my-timbre-lib' , '-s my-ctlogging-lib'. "
     usage
     exit 1
 fi

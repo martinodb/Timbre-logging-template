@@ -7,6 +7,7 @@
                  [com.taoensso/timbre "4.10.0"]
                  
                  [my-timbre-lib/my-timbre-lib "0.1.0-SNAPSHOT"]
+                 [my-ctlogging-lib/my-ctlogging-lib "0.1.0-SNAPSHOT"]
                  
                  ]
   

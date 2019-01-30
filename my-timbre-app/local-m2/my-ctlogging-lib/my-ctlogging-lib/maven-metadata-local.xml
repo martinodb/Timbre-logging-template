@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <metadata>
-  <groupId>my-timbre-lib</groupId>
-  <artifactId>my-timbre-lib</artifactId>
+  <groupId>my-ctlogging-lib</groupId>
+  <artifactId>my-ctlogging-lib</artifactId>
   <versioning>
     <versions>
       <version>0.1.0-SNAPSHOT</version>
     </versions>
-    <lastUpdated>20190130172024</lastUpdated>
+    <lastUpdated>20190130172043</lastUpdated>
   </versioning>
 </metadata>

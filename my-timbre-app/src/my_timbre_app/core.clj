@@ -4,8 +4,8 @@
     [taoensso.timbre.appenders.core :as appenders]
     
     
-    [my-timbre-lib.core :as mtlc]
-    
+    [my-timbre-lib.core :as m-timbre-lc]
+    [my-ctlogging-lib.core :as m-ctlogging-lc]
     
     
     )
@@ -52,7 +52,7 @@
   ;(info (Exception. "Oh noes") "arg1" "arg2")
   
   
-  (mtlc/divide 1 2)
+  (m-timbre-lc/divide 1 2)
   
   
   

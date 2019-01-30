@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <metadata modelVersion="1.1.0">
-  <groupId>my-timbre-lib</groupId>
-  <artifactId>my-timbre-lib</artifactId>
+  <groupId>my-ctlogging-lib</groupId>
+  <artifactId>my-ctlogging-lib</artifactId>
   <version>0.1.0-SNAPSHOT</version>
   <versioning>
     <snapshot>
       <localCopy>true</localCopy>
     </snapshot>
-    <lastUpdated>20190130172024</lastUpdated>
+    <lastUpdated>20190130172043</lastUpdated>
     <snapshotVersions>
       <snapshotVersion>
         <extension>jar</extension>
         <value>0.1.0-SNAPSHOT</value>
-        <updated>20190130172024</updated>
+        <updated>20190130172043</updated>
       </snapshotVersion>
       <snapshotVersion>
         <extension>pom</extension>
         <value>0.1.0-SNAPSHOT</value>
-        <updated>20190130172024</updated>
+        <updated>20190130172043</updated>
       </snapshotVersion>
     </snapshotVersions>
   </versioning>
