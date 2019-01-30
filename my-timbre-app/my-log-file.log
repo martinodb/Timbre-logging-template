@@ -1,6 +1,21 @@
-19-01-30 16:25:45 martin-Aspire-5749 INFO [my-timbre-app.core:47] - This will print
-19-01-30 16:25:45 martin-Aspire-5749 INFO [my-timbre-app.core:48] - (* 5 4 3 2 1) => 120
-19-01-30 16:25:45 martin-Aspire-5749 INFO [my-timbre-app.core:38] - Lexical env: {x 4, y 7}
-19-01-30 16:31:28 martin-Aspire-5749 INFO [my-timbre-app.core:47] - This will print
-19-01-30 16:31:28 martin-Aspire-5749 INFO [my-timbre-app.core:48] - (* 5 4 3 2 1) => 120
-19-01-30 16:31:28 martin-Aspire-5749 INFO [my-timbre-app.core:38] - Lexical env: {x 4, y 7}
+19-01-30 18:17:12 martin-Aspire-5749 INFO [my-timbre-lib.core:14] - dividing 1 by 2
+19-01-30 18:17:12 martin-Aspire-5749 INFO [my-timbre-lib.core:16] - divide-function => 1/2
+19-01-30 18:18:32 martin-Aspire-5749 INFO [my-timbre-lib.core:14] - dividing 1 by 2
+19-01-30 18:18:32 martin-Aspire-5749 INFO [my-timbre-lib.core:16] - divide-function => 1/2
+19-01-30 18:18:45 martin-Aspire-5749 INFO [my-timbre-lib.core:14] - dividing 1 by 0
+19-01-30 18:18:45 martin-Aspire-5749 ERROR [my-timbre-lib.core:16] - 
+          [33mclojure.core/[1;33meval[m  [32m core.clj: 3206[m
+                        [37m...[m  [32m               [m
+[33mmy-timbre-app.core/[1;33meval5776[m  [32mREPL Input     [m
+  [33mmy-timbre-lib.core/[1;33mdivide[m  [32m core.clj:   16[m
+                        [37m...[m  [32m               [m
+[1;31mjava.lang.ArithmeticException[m: [3mDivide by zero[m
+
+19-01-30 18:18:45 martin-Aspire-5749 ERROR [my-timbre-lib.core:18] - There was an error in calculation
+          [33mclojure.core/[1;33meval[m  [32m core.clj: 3206[m
+                        [37m...[m  [32m               [m
+[33mmy-timbre-app.core/[1;33meval5776[m  [32mREPL Input     [m
+  [33mmy-timbre-lib.core/[1;33mdivide[m  [32m core.clj:   16[m
+                        [37m...[m  [32m               [m
+[1;31mjava.lang.ArithmeticException[m: [3mDivide by zero[m
+

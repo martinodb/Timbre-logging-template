@@ -1,15 +1,21 @@
 (ns my-timbre-lib.core
 
-(:require [clojure.tools.logging :as log]))
+(:require     ;[clojure.tools.logging :as ctlog]
+              [taoensso.timbre :as timbre   :refer [log  trace  debug  info  warn  error  fatal  report logf tracef debugf infof warnf errorf fatalf reportf  spy get-env]]
+              [taoensso.timbre.appenders.core :as appenders]
+
+
+
+))
 
 
 ;; https://github.com/clojure/tools.logging
 (defn divide [x y]
-  (log/info "dividing" x "by" y)
+  (timbre/info "dividing" x "by" y)
   (try
-    (log/spyf "result: %s" (/ x y)) ; yields the result
+    (timbre/spy :info "divide-function" (/ x y)) ; yields the result
     (catch Exception ex
-      (log/error ex "There was an error in calculation"))))
+      (timbre/error ex "There was an error in calculation"))))
 
 
 
