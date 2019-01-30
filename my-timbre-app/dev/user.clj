@@ -4,4 +4,4 @@
 (def testing "this is a test")
 
 (defn refresh [] (tnr/refresh))
-; usage in "lein repl": bobtailbot.core=> (u/refresh)
+; usage in "lein repl": my-timbre-app.core=> (user/refresh)
