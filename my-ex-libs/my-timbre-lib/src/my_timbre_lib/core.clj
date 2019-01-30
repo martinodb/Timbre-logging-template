@@ -3,7 +3,7 @@
 (:require [clojure.tools.logging :as log]))
 
 
-
+;; https://github.com/clojure/tools.logging
 (defn divide [x y]
   (log/info "dividing" x "by" y)
   (try
