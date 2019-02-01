@@ -22,7 +22,7 @@
 
 
 
-(defn gizmo-counter-out [n] (pp/cl-format true "~@(~R~) gizmo~:P counted.\n" n))
+(defn gizmo-counter-out [n] (cl-format true "~@(~R~) gizmo~:P counted.\n" n))
 
 (defn gizmo-counter-log [n] (->> n (gizmo-counter-out) (with-out-str) (timbre/info)   ))
 

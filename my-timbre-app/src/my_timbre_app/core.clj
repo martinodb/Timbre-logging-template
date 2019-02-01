@@ -4,8 +4,8 @@
     [taoensso.timbre.appenders.core :as appenders]
     
     
-    [my-timbre-lib.core :as m-timbre-lc]
-    [my-ctlogging-lib.core :as m-ctlogging-lc]
+    [my-timbre-lib.core :as mtl]
+    [my-ctlogging-lib.core :as mctll]
     
     
     )
@@ -43,17 +43,23 @@
   [& args]
   
   (do
-  ;(println "Hello, World!")
+  
   (info "This will print")
   (spy :info (* 5 4 3 2 1))
   (my-mult 4 7)
   (trace "This won't print due to insufficient log level") 
   
+  ; how do I get rid of annoying Esc characters?
   ;(info (Exception. "Oh noes") "arg1" "arg2")
   
   
-  (m-timbre-lc/divide 1 2)
+  (mtl/divide 1 2)
   
+  ;; this will print out
+  (mtl/gizmo-counter-out 4)
+  
+  ;; this will write to log file.
+  (mtl/gizmo-counter-log 5)
   
   
     )
