@@ -61,6 +61,10 @@
   ;; this will write to log file.
   (mtl/gizmo-counter-log 5)
   
+  ;; this also will write to log file.
+  (mtl/gizmo-counter-info 6)
+  
+  
   
     )
   
