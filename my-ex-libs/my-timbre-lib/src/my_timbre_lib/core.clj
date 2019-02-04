@@ -22,11 +22,17 @@
 
 
 
+(defn cl-format-info [writer format-in & args]
+  (let [args2  (into [writer format-in] args)]
+    (->> (apply cl-format args2) (with-out-str) (timbre/info) )  )  )
+
+
+
 (defn gizmo-counter-out [n] (cl-format true "~@(~R~) gizmo~:P counted.\n" n))
 
 (defn gizmo-counter-log [n] (->> n (gizmo-counter-out) (with-out-str) (timbre/info)   ))
 
-
+(defn gizmo-counter-info [n] (cl-format-info true "~@(~R~) gizmo~:P counted.\n" n))
 
 
 (defn foo
