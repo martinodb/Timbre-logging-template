@@ -4,6 +4,12 @@
     [taoensso.timbre.appenders.core :as appenders]
     
     
+    [taoensso.timbre.tools.logging :as tlog :refer [use-timbre]]
+    
+    
+    
+    
+    
     [my-timbre-lib.core :as mtl]
     [my-ctlogging-lib.core :as mctll]
     
@@ -15,7 +21,8 @@
 ;; https://github.com/ptaoussanis/timbre
 
 
-
+(defn setup-tlog "Set up Timbre logging for clojure.tools.logging"
+   [] (use-timbre) )
 
 
 ;; add logging to a file.
@@ -44,6 +51,13 @@
   
   (do
   
+  (clean-log) ; delete previous log entries. This is useful for testing, not so much for real use.
+  
+  (setup-tlog) ; use Timbre for clojure.tools.logging
+  
+  
+  
+  
   (info "This will print")
   (spy :info (* 5 4 3 2 1))
   (my-mult 4 7)
@@ -63,6 +77,15 @@
   
   ;; this also will write to log file.
   (mtl/gizmo-counter-info 6)
+  
+  
+  (info "Now let's try my-ctlogging-lib, the library that uses clojure.tools.logging")
+  
+  (mctll/divide 1 2)
+  
+  
+  
+  (info)
   
   
   

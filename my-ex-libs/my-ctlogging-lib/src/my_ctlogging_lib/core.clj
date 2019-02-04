@@ -1,6 +1,7 @@
 (ns my-ctlogging-lib.core
-
-(:require [clojure.tools.logging :as log]))
+    (:require
+          [clojure.tools.logging :as log]
+           ))
 
 
 ;; https://github.com/clojure/tools.logging
