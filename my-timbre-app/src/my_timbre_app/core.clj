@@ -70,19 +70,28 @@
   (mtl/divide 1 2)
   
   ;; this will print out
-  (mtl/gizmo-counter-out 4)
+  (mtl/gizmo-counter-with-result-out 4)
   
   ;; this will write to log file.
-  (mtl/gizmo-counter-log 5)
+  (mtl/gizmo-counter-with-result-info 5)
   
   ;; this also will write to log file.
-  (mtl/gizmo-counter-info 6)
+  (mtl/gizmo-counter-with-result-out-MODIFIED 6)
+  
+  
   
   
   (info "Now let's try my-ctlogging-lib, the library that uses clojure.tools.logging")
   
   (mctll/divide 1 2)
+  ;; this will print out
+  (mctll/gizmo-counter-with-result-out 7)
   
+  ;; this will write to log file.
+  (mctll/gizmo-counter-with-result-info 8)
+  
+  ;; this also will write to log file.
+  (mctll/gizmo-counter-with-result-out-MODIFIED 9)
   
   
   (info)
